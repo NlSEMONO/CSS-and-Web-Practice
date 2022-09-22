@@ -4,7 +4,7 @@ body {
     margin: 0px;
 }
 
-p, a, h1 {
+p, a, h1, h2 {
     color: #F9FAF8;
     font-family: 'Roboto';
 }
@@ -18,8 +18,14 @@ a {
     text-decoration: none;
 }
 
-h1 {
+h2 {
     font-size: 28px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bolder;
 }
 
 #head-links{
@@ -29,15 +35,35 @@ h1 {
     
 }
 
-.header {
+div {
     display: flex;
-    position: sticky;
-    padding-left: 45px;
-    padding-right: 45px;
     width: auto;
     min-width: 600px;
-    background-color: cadetblue;
+}
+
+.header {
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    padding-left: 45px;
+    padding-right: 45px;
+    background-color: darkslateblue;
     justify-content: space-between;
     align-items: center;
 }
 
+.welcome {
+    display: flex;
+    padding-left: 400px;
+    padding-right: 400px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: darkslateblue;
+    width: auto;
+    justify-content: center;
+}
+
+.welcome-left{ 
+    display: flex;
+    flex-direction: column;
+}
