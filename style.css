@@ -67,3 +67,40 @@ div {
     display: flex;
     flex-direction: column;
 }
+
+.minigame-examples{ 
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.examples {
+    display: flex;
+    justify-content: space-between;
+    padding:0px;
+}
+
+.item img {
+    width: 500px;
+    height: 350px;
+    border-radius: 5%;
+}
+
+.item h2 {
+    color: darkslateblue;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px;
+    width: 500px;
+}
+
+#example-head {
+    color: darkslateblue;
+}
