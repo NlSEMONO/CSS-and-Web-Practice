@@ -54,18 +54,18 @@ div {
 
 .welcome {
     display: flex;
-    padding-left: 400px;
-    padding-right: 400px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: darkslateblue;
     width: auto;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .welcome-left{ 
     display: flex;
     flex-direction: column;
+    width: 600px;
 }
 
 .minigame-examples{ 
@@ -78,7 +78,9 @@ div {
 
 .examples {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     padding:0px;
 }
 
@@ -103,4 +105,25 @@ div {
 
 #example-head {
     color: darkslateblue;
+}
+
+.quote {
+    display: flex;
+    padding-right: 0px;
+    justify-content: center;
+    height: 300px;
+    background-color: blueviolet;
+}
+
+.quote h2 {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.quote p {
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    font-size: 16px;
 }
