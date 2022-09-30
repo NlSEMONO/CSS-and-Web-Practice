@@ -30,7 +30,7 @@ h1 {
 
 #head-links{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     min-width: 350px;
     
 }
@@ -164,6 +164,8 @@ rock paper scissors exclusive styles
 
 .game {
     display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -183,4 +185,39 @@ rock paper scissors exclusive styles
     text-align: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 700;
+}
+
+.pvp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 600px;
+    width: auto;
+}
+
+#player img {
+    width: 200px;
+    height: 200px;
+}
+
+#computer img {
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+}
+
+.pvp h1 {
+    color: black;
+}
+
+.pvp div {
+    min-width: 300px;
+    min-height: 200px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    min-width: 400px;
+    justify-content: space-around;
 }

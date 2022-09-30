@@ -1,3 +1,9 @@
+const p = document.querySelector("#player")
+const c = document.querySelector("#computer")
+
+p.children[0].src = "./images/question.jpg";
+c.children[0].src = "./images/question.jpg";
+
 function getComputerSelection() {
     return Math.floor(Math.random()*3)
 
@@ -41,7 +47,7 @@ function game() {
 
 var loaded = false;
 
-const play = document.querySelector('.play-but')
+const play = document.querySelector('.play')
 play.addEventListener('click', () => {
     playRound();
 })
