@@ -47,7 +47,7 @@ function game() {
 
 var loaded = false;
 
-const play = document.querySelector('.play')
+const play = document.querySelector('#play')
 play.addEventListener('click', () => {
     playRound();
 })

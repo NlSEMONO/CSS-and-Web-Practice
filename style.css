@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 body {
     margin: 0px;
 }
@@ -38,7 +37,7 @@ h1 {
 div {
     display: flex;
     width: auto;
-    min-width: 500px;
+    min-width: 600px;
 }
 
 .header {
@@ -57,7 +56,6 @@ div {
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: darkslateblue;
-    width: auto;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -65,7 +63,7 @@ div {
 .welcome-left{ 
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 500px;
 }
 
 .minigame-examples{ 
@@ -84,7 +82,7 @@ div {
     padding:0px;
 }
 
-.item img, input {
+.item img, .item input {
     width: 500px;
     height: 350px;
     border-radius: 5%;
@@ -110,7 +108,44 @@ div {
 }
 
 #example-head {
+    text-align: center;
     color: darkslateblue;
+}
+
+/* mobile users and resized windows */
+
+@media screen and (max-width:700px) {
+    #head-links {
+        display: none;
+    }
+    .header {
+        padding-left: 30px;
+    }
+
+    div:not(.game-but, .options, .game, .pvp) {
+        min-width: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .welcome {
+        padding-top: 20vw;
+        padding-bottom: 20vw;
+    }
+
+    .welcome img {
+        padding-top: 30px;
+        padding-left: 10px;
+        width: 100vw;
+        height:auto;
+    }
+
+    .welcome-left, .item input, .item img{
+        width: 90vw;
+        padding-left: 10px;
+        padding-right: 10px;
+        height:auto;
+    }
 }
 
 .quote {
@@ -133,6 +168,7 @@ div {
     color: white;
     font-size: 16px;
 }
+
 /*
 rock paper scissors exclusive styles
 */
@@ -173,8 +209,8 @@ rock paper scissors exclusive styles
 .game-but {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
     min-width: 100px;
+    margin-top: 50px;
     border-radius: 5px;
     background-color: darkslateblue;
     text-align: center;
@@ -189,10 +225,8 @@ rock paper scissors exclusive styles
 
 .pvp {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    min-width: 600px;
-    width: auto;
 }
 
 #player img {
@@ -203,7 +237,6 @@ rock paper scissors exclusive styles
 #computer img {
     width: 200px;
     height: 200px;
-    margin-left: 100px;
 }
 
 .pvp h1 {
@@ -211,13 +244,71 @@ rock paper scissors exclusive styles
 }
 
 .pvp div {
-    min-width: 300px;
+    min-width: 200px;
     min-height: 200px;
 }
 
 .options {
     display: flex;
-    justify-content: center;
     min-width: 400px;
     justify-content: space-around;
 }
+
+/* mobile users */
+@media  screen and (max-width: 600px) {
+    .game, .pvp, .options {
+        min-width: 100px;   
+    }
+
+    .game {
+        width: 100%;
+        height: auto;
+    }
+
+    .pvp {
+        width: 77%;
+        height: 70%;
+    }
+
+    .options {
+        width: 70%;
+        height: 70%;
+    }
+
+    .pvp div {
+        min-width: 100px;
+    }
+
+    .game-but:not(#play) {
+        min-width: 75px;
+        margin-top: 0;
+    }
+
+    .game-but:not(#play) p {
+        font-size: 8pt;
+    }
+
+
+    #player, #computer {
+        align-self: flex-end;
+        width: 28%;
+        height: 28%;
+    }
+
+    #player img, #computer img{
+        align-self: center;
+        min-width: 100px;
+        width: 70%;
+        height: auto;
+    }
+
+    #computer {
+        justify-content: end;
+    }
+
+    .pvp h1 {
+        text-align: center;
+    }
+
+}
+
