@@ -4,20 +4,32 @@ const c = document.querySelector("#computer")
 p.children[0].src = "./images/question.jpg";
 c.children[0].src = "./images/question.jpg";
 
+const pvp_buts = document.getElementsByClassName('game-but')
+
+var recent_click = ''
+
+for (var i=1;i<4;i++) {
+    pvp_buts[i].addEventListener('click', () => {
+        console.log(pvp_buts[i].id)
+        recent_click = pvp_buts[i].id
+    })
+}
+
 function getComputerSelection() {
     return Math.floor(Math.random()*3)
 
 }
 
 function getPlayerSelection() {
-    return prompt();
+    return recent_click == '' ? 'paper' : recent_click;
+    
 }
 
 rps_dict = {'rock': 0, 'paper': 1, 'scissors': 2,
             2: 'scissors', 1: 'paper', 0 : 'rock'
 }
 
-function playRound() {
+function playRound(timer, interval) {
     var comp = getComputerSelection();
     var player = getPlayerSelection();
 
@@ -29,10 +41,12 @@ function playRound() {
         return 'Tie';
     } 
     else if (checkPlayerWin(comp, playerNum)) {
-        return 'Player Wins';
+        timer.innerHTML = 'Player Wins';
     } else {
-        return 'Computer Wins';
+        timer.innerHTML = 'Computer Wins';
     }
+
+    clearInterval(interval)
 }
 
 function checkPlayerWin(comp, player) {
@@ -49,11 +63,23 @@ var loaded = false;
 
 const play = document.querySelector('#play')
 play.addEventListener('click', () => {
-    playRound();
+    // show PvP on HTML
+    var game = document.getElementsByClassName('game')[0];
+    game.className = 'game'
+
+    // time the game
+    var timer = document.getElementById('timer');
+    time_interval = setInterval(() => {updateTimer(timer)}, 1000);
+
+    // end the game after 3 secs 
+    setTimeout(() => {playRound(timer, time_interval)}, 3000);
 })
 
-function updateTimer(time) {
-    return time-=1
+function updateTimer(timer) {
+    curr = timer.innerHTML
+    new_time = parseInt(curr) - 1
+    timer.innerHTML = new_time
 }
 
 // game();
+

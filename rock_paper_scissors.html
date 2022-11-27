@@ -11,7 +11,8 @@
             <a href="./index.html"> 
                 <h2> Minigames </h2> 
             </a>
-            <div id="head-links"> 
+            <input type="image" class='icon' src='./images/1024px-Hamburger_icon_white.svg.png' onclick="createDrop()"> 
+            <div id="head-links" class="default"> 
                 <a href="./rock_paper_scissors.html"> Rock Paper Scissors </a> 
                 <a href="#"> 007 </a>
                 <a href="#"> Chopsticks </a>
@@ -27,7 +28,7 @@
                 <li> Rock beats scissors, paper beats rock, scissors beats paper. Based on those rules, determine who wins. </li>
             </ol> 
         </div>
-        <div class="game"> 
+        <div class="game out-of-combat"> 
             <div id="play" class="game-but"> 
                 <p> Play</p>
             </div> 
@@ -43,13 +44,13 @@
             </div>
             
             <div class="options"> 
-                <div class="game-but"> 
+                <div class="game-but" id="rock"> 
                     <p> Rock </p>
                 </div> 
-                <div class="game-but"> 
+                <div class="game-but" id="paper">  
                     <p> Paper </p>
                 </div> 
-                <div class="game-but"> 
+                <div class="game-but" id="scissors"> 
                     <p> Scissors </p>
                 </div> 
             </div> 
@@ -57,5 +58,7 @@
         </div>
         <script src="./rps.js"> 
         </script>
+
+        <script src="./dropdown.js"> </script>
     </body>
 </html>
